@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas and SVG</title>
+</head>
+<body>
+    <h1>HRML CANVAS</h1>
+<h4>
+    The HTML <canvas> element is used to draw graphics on a web page.
+    
+        The graphic to the left is created with <canvas>. It shows four elements: a red rectangle, a gradient rectangle, a
+            multicolor rectangle, and a multicolor text.
+</h4>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    
+
+<h1>HTML SVG</h1>
+<h2> What is SVG?</h2>
+<li> SVG stands for Scalable Vector Graphics</li>
+<li>SVG is used to define graphics for the Web</li>
+<li>SVG is a W3C recommendation</li>
+
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+<svg width="400" height="180">
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+        style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+
+    <p>The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.</p>
+    <p>The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.</p>
+    <p>Canvas has several methods for drawing paths, boxes, circles, text, and adding images.</p>   
+    <p>A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.</p>
+
+    <h4>Example of canvas</h4>
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+
+    <h4>Canvas using JavaScript</h4>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        
+        // Create gradient
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+        </script>
+</body>
+</html>
