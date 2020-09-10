@@ -1,0 +1,91 @@
+.container {
+    margin: 0;
+    padding: 0;
+    background: rgb(200, 210, 219);
+    box-sizing: border-box;
+}
+/* Mobile phones (portrait and landscape) ---------- */
+@media screen and (max-width: 767px){
+    .container {
+        width: 100%;
+        padding: 5px 20px;
+    }
+}
+/* Tablets and iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container {
+        width: 750px;
+        padding: 5px 20px;
+    }
+}
+/* Low resolution desktops and laptops ---------- */
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 980px;
+        padding: 5px 20px;
+    }
+}
+/* High resolution desktops and laptops ---------- */
+@media screen and (min-width: 1280px) {
+    .container {
+        width: 1200px;
+        padding: 5px 20px;
+    }
+}
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: lightslategray;
+  width: fit-content;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: max-content;
+  margin: 10px;
+}
+
+/*CSS Selector*/
+ p {
+    color: black;
+  }
+  #para {
+    color: yellowgreen;
+  }
+  .head {
+    color: black;
+  }
+  .hover {
+    background-color: lightcoral;
+    color: white;
+    padding: 25px;
+  }
+  
+  .hover :hover {
+    background-color: lightgray;
+  }
+  h1 h3 p {
+    display: none;
+    background-color: lightslategrey;
+    padding: 20px;
+  }
+  
+  .hov :hover p {
+    display: block;
+  }
+
+  /*Opacity in CSS */
+  p {	
+    opacity: 0.7;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=50);  /* Opacity for IE8 and lower */
+    zoom: 1;  /* Fix for IE7 */
+    padding: 10px;
+}
+span {
+    color: blue;
+    border: 1px solid black;
+}
+
+.extra span {
+    color: inherit;
+}
